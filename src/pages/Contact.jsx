@@ -103,7 +103,7 @@ const Contact = () => {
 
       {/* Add a note or email below the form */}
       <div className="mt-6 text-center text-gray-400">
-        <p>Or email me at <a href="mailto:hello@surajitsen.me" className="text-primary-500">getsensurajit@gmail.com</a></p>
+        <p>Or email me at <a href="mailto:hello@surajitsen.me" className="text-primary-500">hello@surajitsen.me</a></p>
       </div>
     </div>
   );
