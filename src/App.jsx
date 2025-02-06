@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound'; // Import 404 Page
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -15,24 +16,25 @@ function App() {
   return (
     <BrowserRouter>
       <div className="min-h-screen bg-gray-900 text-white flex flex-col">
-        <AnimatePresence>
-          {loading ? (
-            <Loader setLoading={setLoading} />
-          ) : (
-            <>
-              <Navbar />
-              <main className="flex-grow pt-16">
+        {loading ? (
+          <Loader setLoading={setLoading} />
+        ) : (
+          <>
+            <Navbar />
+            <main className="flex-grow pt-16">
+              <AnimatePresence mode="wait">
                 <Routes>
                   <Route path="/" element={<Home />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="*" element={<NotFound />} /> {/* 404 Route */}
                 </Routes>
-              </main>
-              <Footer />
-            </>
-          )}
-        </AnimatePresence>
+              </AnimatePresence>
+            </main>
+            <Footer />
+          </>
+        )}
       </div>
     </BrowserRouter>
   );
