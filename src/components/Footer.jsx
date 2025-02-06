@@ -12,9 +12,9 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-white mb-4">Connect</h3>
           <div className="flex justify-center space-x-4">
             {[
-              { href: 'https://github.com', icon: <FaGithub /> },
-              { href: 'https://linkedin.com', icon: <FaLinkedin /> },
-              { href: 'https://twitter.com', icon: <FaTwitter /> },
+              { href: 'https://github.com/blackXploit-404', icon: <FaGithub /> },
+              { href: 'https://linkedin.com/getsensurajit', icon: <FaLinkedin /> },
+              { href: 'https://twitter.com/getsensurajit', icon: <FaTwitter /> },
             ].map(({ href, icon }, index) => (
               <motion.a
                 key={index}
